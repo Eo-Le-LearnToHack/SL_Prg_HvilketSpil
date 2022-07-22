@@ -48,7 +48,7 @@ while (true)
 
 ///////////////////////////////////////////////////
 //HERUNDER FINDES METODERNE
-string DitSpil(string instruction, string erroMessage)
+string DitSpil(string instruction, string errorMessage)
 {
     string? userInput = null;
     char[] charsToTrim = { '*', ' ', '\'', '*', '?', '@', '#', '"','%' }; //Disse karakterer bliver trimmet væk ved brug af Trim() funktionen.
@@ -59,7 +59,7 @@ string DitSpil(string instruction, string erroMessage)
         string temp = userInput.Trim(charsToTrim);
         if ( String.IsNullOrEmpty(temp) || String.IsNullOrWhiteSpace(temp) || userInput.Length <= 2)
         {
-            Console.Write(erroMessage);
+            Console.Write(errorMessage);
             userInput = null;
         }
     } while (userInput==null);
